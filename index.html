@@ -298,7 +298,7 @@ nav a:focus {
 
 .menu-category h3 {
   color: #a90f19;
-  margin-top: 0;
+  margin-top: 0;c
 }
 
 button,
@@ -357,10 +357,10 @@ footer {
     padding-bottom: 55px;
   }
 
-  .menu-category {
-    padding: 18px;
-    margin: 16px auto;
-  }
+  .menu-category h3 {
+  color: #a90f19;
+  margin-top: 0;
+}
 }
 .hero-image {
   max-width: 1000px;
@@ -382,6 +382,29 @@ footer {
   .hero-image img {
     height: 230px;
   }
+}
+
+/* Luxury Explore Our Platters button */
+a.button {
+  display: inline-block;
+  background: #b5121b;
+  color: #ffffff;
+  border: 1px solid #b5121b;
+  border-radius: 4px;
+  padding: 14px 28px;
+  margin-top: 22px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 14px rgba(181, 18, 27, 0.2);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+a.button:hover {
+  background: #850b13;
+  transform: translateY(-2px);
 }
 </style>
 </head>
@@ -409,6 +432,9 @@ footer {
     <h2>Welcome to Siphelaphi's Platters</h2>
     <p>Make your celebrations memorable with food prepared with love.</p>
     <p>Perfect for family gatherings, parties, meetings and special events.</p>
+    <a href="#menu" class="button" onclick="event.preventDefault(); document.querySelectorAll('.page-section').forEach(s => s.classList.toggle('active', s.id === 'menu')); history.replaceState(null, '', '#menu'); window.scrollTo(0, 0);">
+  Explore Our Platters
+</a>
   </section>
   <section class="page-section" id="menu">
   <h2>Our Platters</h2>
