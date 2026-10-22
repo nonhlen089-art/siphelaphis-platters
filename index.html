@@ -195,8 +195,174 @@
 .page-section.active {
   display: block;
 }
-</style>
 
+/* Siphelaphi's Platters — Luxury Styling */
+body {
+  background: #faf8f6;
+  color: #292525;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+  margin: 0;
+}
+
+header {
+  background: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  border-bottom: 4px solid #b5121b;
+}
+
+header h1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header p {
+  color: #eeeeee;
+  letter-spacing: 1px;
+}
+
+nav {
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 10px;
+  border-bottom: 1px solid #b5121b;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #b5121b;
+  border-radius: 4px;
+}
+
+.page-section {
+  min-height: 55vh;
+  box-sizing: border-box;
+  padding: 45px 20px;
+}
+
+.page-section h2 {
+  color: #a90f19;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+#home {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: linear-gradient(135deg, #ffffff, #f2e9e4);
+}
+
+#home h2 {
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: 1px;
+}
+
+#home p {
+  max-width: 680px;
+  margin: 12px auto;
+}
+
+#menu {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-category {
+  background: #ffffff;
+  border: 1px solid #e8ddd8;
+  border-top: 3px solid #b5121b;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgba(40, 20, 20, 0.06);
+  text-align: left;
+}
+
+.menu-category h3 {
+  color: #a90f19;
+  margin-top: 0;
+}
+
+button,
+.button,
+#menu a {
+  background: #b5121b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 13px 22px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+
+button:hover,
+.button:hover,
+#menu a:hover {
+  background: #850b13;
+}
+
+footer {
+  background: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 24px 16px;
+  border-top: 3px solid #b5121b;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 22px 12px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 4px;
+  }
+
+  nav a {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .page-section {
+    padding: 30px 15px;
+  }
+
+  #home {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .menu-category {
+    padding: 18px;
+    margin: 16px auto;
+  }
+}
+</style>
 </head>
 <body>
 
