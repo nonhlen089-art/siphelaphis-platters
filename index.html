@@ -187,7 +187,14 @@
     font-size: 20px;
   }
 }
+/* Show only the selected page section */
+.page-section {
+  display: none;
+}
 
+.page-section.active {
+  display: block;
+}
 </style>
 
 </head>
@@ -206,12 +213,12 @@
     <a href="#about">About Us</a>
     <a href="#contact">Contact</a>
   </nav>
-   <section class="hero" id="home">
+  <section class="hero page-section active" id="home">
     <h2>Welcome to Siphelaphi's Platters</h2>
     <p>Make your celebrations memorable with food prepared with love.</p>
     <p>Perfect for family gatherings, parties, meetings and special events.</p>
   </section>
-  <section id="menu">
+  <section class="page-section" id="menu">
   <h2>Our Platters</h2>
   <p>Explore our freshly prepared sandwich, savoury, meat and baked goods platters, made to order for your special occasions.</p>
   <p>Freshly prepared platters made to order. Contact us for a quote.</p>
@@ -257,13 +264,13 @@
   </a>
 </section>
 
-<section id="about">
+ <section class="page-section" id="about">
     <h2>About Us</h2>
     <p>At Siphelaphi's Platters, we believe good food brings people together.
     Our goal is to make every occasion special with delicious food and caring service.</p>
   </section>
 
-  <section class="contact" id="contact">
+ <section class="page-section" id="contact">
     <h2>Place Your Order</h2>
     <p>Call or WhatsApp us to discuss your platter and get a quote.</p>
     <a href="tel:+27815997769">Call 081 599 7769</a>
@@ -274,6 +281,29 @@
     <p>Siphelaphi's Platters | Made to Impress.</p>
     <p>Phone: 081 599 7769</p>
   </footer>
+
+<script>
+  const navLinks = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('.page-section');
+
+  function showSection(sectionId) {
+    sections.forEach(section => {
+      section.classList.toggle('active', section.id === sectionId);
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const sectionId = this.getAttribute('href').substring(1);
+      showSection(sectionId);
+      history.replaceState(null, '', '#' + sectionId);
+      window.scrollTo(0, 0);
+    });
+  });
+
+  showSection(window.location.hash.substring(1) || 'home');
+</script>
 
 </body>
 </html>
